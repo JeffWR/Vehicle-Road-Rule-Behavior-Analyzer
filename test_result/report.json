@@ -1,0 +1,26 @@
+{
+  "scenario": "Campus Drive Westbound",
+  "violations": [
+    {
+      "type": "SPEEDING",
+      "time": "00:02.0",
+      "details": "40.0 mph in 35 mph zone"
+    },
+    {
+      "type": "ROLLING_STOP",
+      "time": "00:04.0",
+      "details": "Stopped 1.0s; required 3.0s"
+    },
+    {
+      "type": "TAILGATING",
+      "time": "00:09.0",
+      "details": "2.0 m < 5.0 m"
+    },
+    {
+      "type": "UNSAFE_LANE_CHANGE",
+      "time": "00:10.0",
+      "details": "follow 2.0 m < 5.0 m"
+    }
+  ],
+  "total_violations": 4
+}

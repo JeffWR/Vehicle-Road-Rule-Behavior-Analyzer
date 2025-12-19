@@ -1,0 +1,18 @@
+{
+  "total_mutants": 10,
+  "killed": 10,
+  "survived": 0,
+  "killed_ids": [
+    "rules_rules_ge_speed",
+    "rules_rules_lane_always",
+    "rules_rules_lane_ignore",
+    "rules_rules_never_speed",
+    "rules_rules_speed_round",
+    "rules_rules_stop_le",
+    "rules_rules_stop_minus1",
+    "rules_rules_tail_plus1",
+    "rules_rules_tail_rev",
+    "rules_rules_time_fmt"
+  ],
+  "survived_ids": []
+}

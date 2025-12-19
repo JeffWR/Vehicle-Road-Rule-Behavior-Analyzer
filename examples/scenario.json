@@ -1,0 +1,16 @@
+{
+  "name": "Campus Drive Westbound",
+  "description": "Short run near stop signs and lane change.",
+  "road_rules": {
+    "max_speed": 35,
+    "min_follow_distance": 5,
+    "stop_sign_wait": 3
+  },
+  "speed_zones": [
+    {
+      "start_mile": 0.0,
+      "end_mile": 0.5,
+      "speed_limit": 25
+    }
+  ]
+}

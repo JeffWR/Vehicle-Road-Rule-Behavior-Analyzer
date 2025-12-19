@@ -1,0 +1,5 @@
+PRAGMA foreign_keys = ON;
+CREATE TABLE IF NOT EXISTS ruleset (rule_id INTEGER PRIMARY KEY, max_speed REAL NOT NULL, min_follow_distance REAL NOT NULL, stop_sign_wait REAL NOT NULL, created_at TEXT NOT NULL DEFAULT (datetime('now')));
+CREATE TABLE IF NOT EXISTS scenario (scenario_id INTEGER PRIMARY KEY, name TEXT NOT NULL, description TEXT, source_file TEXT NOT NULL, ruleset_id INTEGER NOT NULL, created_at TEXT NOT NULL DEFAULT (datetime('now')), FOREIGN KEY (ruleset_id) REFERENCES ruleset(rule_id) ON DELETE CASCADE);
+CREATE TABLE IF NOT EXISTS violation (violation_id INTEGER PRIMARY KEY, scenario_id INTEGER NOT NULL, tstamp TEXT NOT NULL, type TEXT NOT NULL, details TEXT NOT NULL, FOREIGN KEY (scenario_id) REFERENCES scenario(scenario_id) ON DELETE CASCADE);
+CREATE TABLE IF NOT EXISTS speed_zone (zone_id INTEGER PRIMARY KEY, start_mile REAL NOT NULL, end_mile REAL NOT NULL, speed_limit REAL NOT NULL, scenario_id INTEGER NOT NULL, FOREIGN KEY (scenario_id) REFERENCES scenario(scenario_id) ON DELETE CASCADE);
